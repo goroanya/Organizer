@@ -1,0 +1,128 @@
+/* Notes */
+
+.notes-content {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    clear: both;
+}
+.notes_item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+    color: #000;
+    background: #ffc;
+
+    width: 300px;
+    min-height: 250px;
+    margin: 30px;
+
+    -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+
+    transition: transform 0.15s linear;
+    -moz-transition: -moz-transform 0.15s linear;
+    -webkit-transition: -webkit-transform 0.15s linear;
+
+    transform: rotate(-6deg);
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+}
+
+.notes_item:nth-child(even) {
+    transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+    background: #cfc;
+}
+.notes_item:nth-child(3n) {
+    transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+    background: #ccf;
+}
+.notes_item:nth-child(5n) {
+    -o-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+    position: relative;
+    top: -10px;
+}
+.notes_item:hover,
+.notes_item:focus {
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+}
+
+.notes_item_title {
+    font-weight: bold;
+}
+
+.notes_item_text {
+    font-size: 24px;
+    font-family: "Reenie Beanie", arial, sans-serif;
+}
+.notes_item_date {
+    padding-bottom: 20px;
+}
+
+/* Pagination */
+
+.pagination {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 70px;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.pagination a {
+    outline: none;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.active-page a {
+    background-color: #db9dc3;
+}
+.pagination a:hover:not(.active) {
+    background-color: #e4c8d9;
+}
+
+/* Search */
+.search_container {
+    float: right;
+    margin: -10px 0 10px;
+}
+
+.search_input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    max-width: 350px;
+    background: #ffffff;
+}
